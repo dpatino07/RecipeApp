@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="scss/style.css">
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/350fd410c5.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="mobile-container">
+        <header>
+            <input type="text">
+            <button id="search"><i class="fas fa-search"></i></button>
+        </header>
+
+        <div class="fav-container">
+            <h3>Favorite Meals </h3>
+            <ul class="fav-meals">
+                <li><img src="https://www.themealdb.com/images/ingredients/Lime.png
+                    " alt=""><span>Lime</span></li>
+                <li><img src="https://www.themealdb.com/images/media/meals/llcbn01574260722.jpg/preview
+                    " alt=""><span>Carbonara</span></li>
+                <li><img src="https://www.themealdb.com/images/media/meals/usywpp1511189717.jpg" alt=""><span>Shrimp Scampi</span></li>
+            </ul>
+        </div>
+
+        <div class="meals" id="meals">
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/app.js" defer></script>
+</body>
+</html>
