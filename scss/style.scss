@@ -22,7 +22,7 @@ body {
 .mobile-container {
     width: 400px;
     background-color: #fff;
-    border-radius: 3px;
+    border-radius: $border-radius;
     box-shadow: $box-shadow;
     overflow: hidden;
 }
@@ -39,7 +39,7 @@ header {
     input {
         font-family: inherit;
         padding: 0.5rem 1rem;
-        border-radius: 3px;
+        border-radius: $border-radius;
         border:none;
         background-color: #eee;
     }
@@ -53,6 +53,7 @@ header {
     }
 }
 
+/* FAVORITE MEALS */
 .fav-container {
     background-color: rgb(191, 230, 255);
     padding: 0.25rem 1rem;
@@ -78,8 +79,36 @@ header {
         }
 
         span {
+            display: inline-block;
             font-size: 0.9rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 75px;
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+
+            &:hover {
+                white-space: normal;
+                overflow: auto;
+            }
         }
+    }
+}
+
+.fav-meals li .clear {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    font-size: 1.2rem;
+    opacity: 0;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
     }
 }
 
@@ -87,6 +116,7 @@ header {
     margin: 1.5rem;
     border-radius: 3px;
     box-shadow: $box-shadow;
+    border-radius: $border-radius;
 }
 
 .meal-header {
@@ -94,11 +124,12 @@ header {
 
     .random {
         position: absolute;
-        top: 1rem;
+        bottom: 1.5rem;
+        right: 0;
         background-color: #fff;
         padding: 0.25rem  0.5rem;
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
     }
 
     img {
